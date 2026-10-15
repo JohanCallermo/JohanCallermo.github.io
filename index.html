@@ -22,6 +22,29 @@
       padding: 70px 30px 80px;
     }
 
+    .profile-header {
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: flex-start;
+      gap: 32px;
+      margin-bottom: 65px;
+    }
+
+    .profile-intro {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .portrait {
+      display: block;
+      flex: none;
+      width: 240px;
+      max-width: 100%;
+      height: auto;
+      border-radius: 4px;
+      background: #f3f3f3;
+    }
+
     h1 {
       margin: 0 0 8px;
       font-size: 2.4rem;
@@ -36,7 +59,6 @@
     }
 
     .links {
-      margin-bottom: 65px;
       font-size: 1rem;
     }
 
@@ -86,12 +108,18 @@
         padding: 45px 22px 55px;
       }
 
-      h1 {
-        font-size: 2rem;
+      .profile-header {
+        flex-direction: column;
+        gap: 24px;
+        margin-bottom: 48px;
       }
 
-      .links {
-        margin-bottom: 48px;
+      .portrait {
+        width: 192px;
+      }
+
+      h1 {
+        font-size: 2rem;
       }
 
       section {
@@ -104,19 +132,25 @@
 <body>
   <main class="container">
 
-    <header>
-      <h1>Johan Callermo</h1>
+    <header class="profile-header">
+      <!-- Place your 469 x 461 px photo beside this HTML file as portrait.png. -->
+      <img class="portrait" src="portrait.png" alt="Portrait of Johan Callermo"
+           width="469" height="461">
 
-      <p class="subtitle">
-        PhD Candidate in Economics<br>
-        Stockholm School of Economics
-      </p>
+      <div class="profile-intro">
+        <h1>Johan Callermo</h1>
 
-      <nav class="links">
-        <a href="CV.pdf">CV</a>
-        <a href="mailto:Johan.Callermo@hhs.se">Email</a>
+        <p class="subtitle">
+          PhD Candidate in Economics<br>
+          Stockholm School of Economics
+        </p>
+
+        <nav class="links">
+          <a href="CV.pdf">CV</a>
+          <a href="mailto:Johan.Callermo@hhs.se">Email</a>
 <!--    <a href="https://scholar.google.com/">Google Scholar</a> -->
-      </nav>
+        </nav>
+      </div>
     </header>
 
 
@@ -165,8 +199,8 @@
         <!--<div>
           <a href="https://doi.org/10.1016/j.irle.2024.106236">
             Case law in European merger control
-          </a> -->
-        </div>
+          </a>
+        </div> -->
       </div>
     </section>
 
